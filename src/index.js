@@ -3,18 +3,21 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
-// import * as bootstrap from 'bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
+import { Provider } from 'react-redux';
 
-import { AuthContextProvider } from './store/auth-context';
+import store from './store/index';
+import { AuthContextProvider } from './context/auth-context';
 
 ReactDOM.render(
-  <AuthContextProvider>
-    <React.StrictMode>
-      .
-      <App />.
-    </React.StrictMode>
-  </AuthContextProvider>,
+  <Provider store={store}>
+    <AuthContextProvider>
+      <React.StrictMode>
+        .
+        <App />.
+      </React.StrictMode>
+    </AuthContextProvider>
+  </Provider>,
   document.getElementById('root')
 );
 

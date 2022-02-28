@@ -4,7 +4,7 @@ import { useNavigate } from 'react-router-dom';
 import Swal from 'sweetalert2';
 import classes from './logIn.module.css';
 import image from '../../assets/loginImg.jpg';
-import AuthContext from '../../store/auth-context';
+import AuthContext from '../../context/auth-context';
 import axios from 'axios';
 
 const LogIn = () => {
